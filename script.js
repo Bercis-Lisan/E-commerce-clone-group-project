@@ -5,6 +5,10 @@ if (offerCloseBtn) {
         offerBar.style.display = "none";
     });
 }
+
+
+
+
 const filterBtns = document.querySelectorAll(".filter-btn");
 
 filterBtns.forEach(button => {
