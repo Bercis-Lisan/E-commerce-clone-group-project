@@ -1,11 +1,170 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product list</title>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Luxe walk | Fashion Destination</title>
+    <link rel='stylesheet' href='style.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-    
+    <!--login icon bar-->
+    <div class="icon">
+        <p>Help</p>
+        <hr>
+        <P>Sign up </P>
+        <hr>
+        <P>Login</P>
+
+    </div>
+    <!--navbar section-->
+
+    <div class="navbar">
+
+        <a href="#" class="logo">
+            <i class="fa-brands fa-shopify"></i> Luxe Walk
+        </a>
+
+        <ul class="head">
+            <li><a href="#">New & Featured</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">Kids</a></li>
+            <li><a href="#">Jordan</a></li>
+            <li><a href="#">Sale</a></li>
+        </ul>
+
+        <div class="cart">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+
+        <div class="navbar-menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+    </div>
+
+
+    <!--Offer bar-->
+    <div class="offer-bar">
+        <h3>Enjoy 10% Off On The Nike App. Use: APP10</h3>
+        <a href="">Download Now
+        </a>
+        <a href="" class="dw">T&C
+        </a>
+
+    </div>
+    <!--Product navbar-->
+    <div class="product-navbar">
+        <a href="#" class="logo">
+            <i class="fa-brands fa-shopify"></i>Luxe Walk
+        </a>
+        <div class="sorted">
+            <p id="filterToggle">Show filters<i class="fa-solid fa-sliders"></i>
+            </p>
+            <p>Sort By</p><i class="fa-solid fa-angle-down"></i>
+        </div>
+    </div>
+
+    <!--Sidebar Filters & Product grid-->
+    <section class="product-workspace">
+        <div class="workspace-container">
+            <!-- Left Sidebar Filters -->
+            <aside class="filter-bar">
+                <div class="filter-item">
+                    <button class="filter-btn">Men</button>
+
+                    <div class="filter-content">
+                        <a href="#" onclick="filterProducts('men-clothing')">Men Clothing</a>
+                        <a href="#" onclick="filterProducts('men-shoes')">Men's Shoes</a>
+                        <a href="#" onclick="filterProducts('men-accessories')">Accessories & Equipments</a>
+                    </div>
+
+                </div>
+                <div class="filter-item">
+                    <button class="filter-btn">Women</button>
+
+                    <div class="filter-content">
+                        <a href="#" onclick="filterProducts('women-clothing')">Women Clothing</a>
+                        <a href="#" onclick="filterProducts('women-shoes')">Women's Shoes</a>
+                        <a href="#" onclick="filterProducts('women-accessories')">Accessories &
+                        Equipments</a>
+                    </div>
+
+                </div>
+                <div class="filter-item">
+                    <button class="filter-btn">Kids</button>
+
+                    <div class="filter-content">
+                        <a href="#" onclick="filterProducts('kids-clothing')">Kids Clothing</a>
+                        <a href="#" onclick="filterProducts('kids-shoes')">Kid's Shoes</a>
+                    </div>
+
+                </div>
+                <div class="filter-item">
+                    <button class="filter-btn">Sports</button>
+
+                    <div class="filter-content">
+                        <a href="#" onclick="filterProducts('football')">Football</a>
+                        <a href="#" onclick="filterProducts('lifestyle')">Lifestyle</a>
+                        <a href="#" onclick="filterProducts('running')">Running</a>
+                        <a href="#" onclick="filterProducts('tennis')">Tennis</a>
+                        <a href="#" onclick="filterProducts('workout')">Workout</a>
+                        <a href="#" onclick="filterProducts('training and gym ')">Training and Gym</a>
+                    </div>
+
+                </div>
+                <div class="filter-item">
+                    <button class="filter-btn">Discount</button>
+
+                    <div class="filter-content">
+
+                        <a href="#" onclick="filterProducts('10% and above')">10% and above</a>
+                        <a href="#" onclick="filterProducts('20% and above')">20% and above</a>
+                        <a href="#" onclick="filterProducts('all discounted products')">All discounted Products</a>
+
+                    </div>
+
+                </div>
+                <div class="filter-item">
+                    <button class="filter-btn">Sleeve length</button>
+
+                    <div class="filter-content">
+                        <a href="#" onclick="filterProducts('long sleeve')">Long Sleeve</a>
+                        <a href="#" onclick="filterProducts('short sleeve')">Short Sleeve</a>
+                    </div>
+
+                </div>
+            </aside>
+            <!-- Product Grid -->
+            <div class="product-container" id="productContainer">
+
+            </div>
+
+        </div>
+    </section>
+    <script src="script.js">
+
+    </script>
+
 </body>
+
 </html>
