@@ -35,10 +35,11 @@ body {
 }
 
 
-/* navabar-section */
+/* navbar-section */
 
 .navbar {
     display: flex;
+    background-color: white;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
@@ -279,6 +280,7 @@ i {
 
 .filter-btn {
     width: 100%;
+    text-align: left;
     display: flex;
     justify-content: space-between;
     align-items: center;
