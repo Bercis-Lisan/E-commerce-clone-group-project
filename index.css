@@ -215,13 +215,14 @@ body {
 
 
     width: 100%;
-    margin: 5px;
+    margin: -1%;
     padding: 0;
 }
 
 .container-main {
     overflow: hidden;
-    width: 100%;
+    width: fit-content;
+    margin: 5px;
     border-radius: 0;
     background-color: #F4F4F4;
     padding: 20px 0px;
@@ -230,6 +231,8 @@ body {
 
 .wrapper {
     display: grid;
+    width: fit-content;
+    margin: 5px;
     grid-auto-flow: column;
     grid-auto-flow: 12rem;
     gap: 2rem;

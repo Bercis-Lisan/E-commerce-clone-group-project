@@ -7,6 +7,7 @@
     <title>Home Page</title>
     <link rel='stylesheet' href='index.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
 
 
@@ -42,11 +43,30 @@
             <i class="fa-solid fa-cart-shopping"></i>
         </div>
 
-        <div class="navbar-menu-toggle">
+        <div class="navbar-menu-toggle" id="menuicon">
             <i class="fa-solid fa-bars"></i>
         </div>
 
     </div>
+
+<!-- side nav -->
+
+    <section id="sidenav" class=" bg-white fixed z-20 top-0 transition-all duration-1000" style="width: 50%; height: 100vh; right:-50%">
+    <div class="text-right p-5 ">
+        <p id="navclose" class="inline cursor-pointer">X</p>
+    </div>
+        <ul class="flex flex-col gap-10 text-gray-600 items-center">
+            <li>
+                <a class="hover:underline" href="./index.html">Home</a>
+            </li>
+            <li>
+                <a class="hover:underline" href="./product.html" >Products</a>
+            </li>
+            <li>
+                <a class="hover:underline" href="./product.html">For mens</a>
+            </li>
+        </ul>
+    </section>
 
 
     <!--Offer bar-->
@@ -230,7 +250,7 @@
         </div>
     </footer>
 
-
+<script src="./index.js"></script>
 </body>
 
 </html>
