@@ -203,6 +203,8 @@ body {
 
 .banner-btn button {
     padding: 15px 30px;
+    background-color: white;
+    color: black;
     border: none;
     border-radius: 30px;
     font-size: 18px;
@@ -295,10 +297,14 @@ body {
 }
 
 .content button {
-    padding: 10px 25px;
+    background: #fff;
+    color: #000;
     border: none;
+    padding: 12px 28px;
     border-radius: 30px;
+    font-size: 16px;
     cursor: pointer;
+    font-weight: 600;
 }
 
 @media (max-width:768px) {
