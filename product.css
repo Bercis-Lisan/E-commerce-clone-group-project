@@ -45,6 +45,7 @@ body {
     padding: 20px;
     top: 0;
     position: sticky;
+    z-index: 20;
 }
 
 .logo {
@@ -87,6 +88,26 @@ body {
     gap: 20px;
     font-size: 22px;
 }
+
+
+
+.contact-button{
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+
+
+
+
+
+
+
 
 /* Hide menu icon in desktop */
 .navbar-menu-toggle {
@@ -337,6 +358,46 @@ i {
     align-items: center;
     gap: 8px;
 }
+.sort-dropdown{
+    position: relative;
+}
+
+#sortBtn{
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.sort-menu{
+    position: absolute;
+    top: 35px;
+    right: 0;
+    width: 140px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.15);
+    display: none;
+    z-index: 100;
+}
+
+.sort-menu p{
+    margin: 0;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.sort-menu p:hover{
+    background: #f3f3f3;
+}
+
+.sort-menu.show{
+    display: block;
+}
 
 .product-container {
     flex: 1;
@@ -370,8 +431,23 @@ i {
 }
 
 
-.product-card p {
-    color: #555;
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: gray;
+    margin-left: 8px;
+}
+
+.discount {
+    color: green;
+    font-weight: bold;
+    margin-left: 8px;
 }
 
 .tag {

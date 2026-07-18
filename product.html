@@ -20,6 +20,25 @@
         rel="stylesheet">   
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .cart {
+            position: relative;
+        }
+        .cart-count {
+            position: absolute;
+            top: -6px;
+            right: -10px;
+            background: #ef4444;
+            color: #fff;
+            border-radius: 9999px;
+            padding: 0 6px;
+            font-size: 12px;
+            line-height: 18px;
+            min-width: 18px;
+            text-align: center;
+            pointer-events: none;
+        }
+    </style>
     
 </head>
 
@@ -34,16 +53,16 @@
         </a>
 
         <ul class="head">
-            <li><a href="index.html">New & Featured</a></li>
-            <li><a href="product.html?category=men">Men</a></li>
-            <li><a href="product.html?category=women">Women</a></li>
-            <li><a href="#">Jordan</a></li>
-            <li><a href="#">Sale</a></li>
+            <li><a href="index.html" target="_blank">New & Featured</a></li>
+            <li><a href="product.html" target="_blank">Mens</a></li>
+            <li><a href="product2.html" target="_blank">Womens</a></li>  
+            <li><a href="product.html" target="_blank">Jordan</a></li>
+            <li><a href="contact.html" target="_blank">Contact Us</a></li>
         </ul>
 
         <div class="cart">
-            <i class="fa-regular fa-heart"></i>
             <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cartCount" class="cart-count">0</span>
         </div>
 
         <div class="navbar-menu-toggle" id="menuicon">
@@ -70,6 +89,12 @@
             <li>
                 <a class="hover:underline" href="./product.html">For mens</a>
             </li>
+            <li>
+                <a class="hover:underline" href="./product2.html">For Womens</a>
+            </li>
+            <li>
+                <a class="hover:underline" href="./contact.html"><button class="contact-button">Contact Us</button></a>
+            </li>
         </ul>
     </section>
 
@@ -85,11 +110,20 @@
     </div>
     <!--Product navbar-->
     <div class="product-navbar">
-        
+
         <div class="sorted">
             <p id="filterToggle">Show filters<i class="fa-solid fa-sliders"></i>
             </p>
-            <p>Sort By</p><i class="fa-solid fa-angle-down"></i>
+            <div class="sort-dropdown">
+                <button id="sortBtn">
+                    Sort By <i class="fa-solid fa-angle-down"></i>
+                </button>
+
+                <div class="sort-menu" id="sortMenu">
+                    <p onclick="sortProducts('featured')">Featured</p>
+                    <p onclick="sortProducts('newest')">Newest</p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -108,17 +142,7 @@
                     </div>
 
                 </div>
-                <div class="filter-item">
-                    <button class="filter-btn">Women</button>
-
-                    <div class="filter-content">
-                        <a href="#" onclick="filterProducts('women-clothing')">Women Clothing</a>
-                        <a href="#" onclick="filterProducts('women-shoes')">Women's Shoes</a>
-                        <a href="#" onclick="filterProducts('women-accessories')">Accessories &
-                        Equipments</a>
-                    </div>
-
-                </div>
+                
                 <div class="filter-item">
                     <button class="filter-btn">Kids</button>
 
@@ -136,8 +160,6 @@
                         <a href="#" onclick="filterProducts('lifestyle')">Lifestyle</a>
                         <a href="#" onclick="filterProducts('running')">Running</a>
                         <a href="#" onclick="filterProducts('tennis')">Tennis</a>
-                        <a href="#" onclick="filterProducts('workout')">Workout</a>
-                        <a href="#" onclick="filterProducts('training and gym ')">Training and Gym</a>
                     </div>
 
                 </div>
@@ -165,15 +187,29 @@
             </aside>
             <!-- Product Grid -->
             <div class="product-container" id="productContainer">
-
+                    
             </div>
 
         </div>
     </section>
-    <script src="script.js">
 
+    
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var cartCountEl = document.getElementById('cartCount');
+            var cartCount = 0;
+
+            document.body.addEventListener('click', function (event) {
+                var button = event.target.closest('.add-to-cart');
+                if (button) {
+                    cartCount += 1;
+                    cartCountEl.textContent = cartCount;
+                }
+            });
+        });
     </script>
 
-</body>
 
 </html>

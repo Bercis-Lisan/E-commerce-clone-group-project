@@ -85,6 +85,17 @@ body {
     font-size:22px;
 }
 
+.contact-button{
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+
 /* Hide menu icon in desktop */
 .navbar-menu-toggle{
     display:none;
