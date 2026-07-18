@@ -5,6 +5,7 @@
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>Products list</title>
+    <title>Products For Mens</title>
     <link rel='stylesheet' href='product.css'>
     <link rel="stylesheet" href="tailwind.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
@@ -25,6 +26,14 @@
 
 <body>
 
+        rel="stylesheet">   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+</head>
+
+<body>
+   
     <!--navbar section-->
 
     <div class="navbar">
@@ -39,6 +48,8 @@
             <li><a href="product.html?category=women">Women</a></li>
             <li><a href="product.html?category=jordan">Jordan</a></li>
             <li><a href="product.html">Sale</a></li>
+            <li><a href="#">Jordan</a></li>
+            <li><a href="#">Sale</a></li>
         </ul>
 
         <div class="cart">
@@ -61,12 +72,17 @@
         <div class="text-right p-5 ">
             <p id="navclose" class="inline cursor-pointer">X</p>
         </div>
+    <section id="sidenav" class=" bg-white fixed z-20 top-0 transition-all duration-1000" style="width: 50%; height: 100vh; right:-50%">
+    <div class="text-right p-5 ">
+        <p id="navclose" class="inline cursor-pointer">X</p>
+    </div>
         <ul class="flex flex-col gap-10 text-gray-600 items-center">
             <li>
                 <a class="hover:underline" href="./index.html">Home</a>
             </li>
             <li>
                 <a class="hover:underline" href="./product.html">Products</a>
+                <a class="hover:underline" href="./product.html" >Products</a>
             </li>
             <li>
                 <a class="hover:underline" href="./product.html">For mens</a>
@@ -100,6 +116,11 @@
                     <p onclick="sortProducts('newest')">Newest</p>
                 </div>
             </div>
+        
+        <div class="sorted">
+            <p id="filterToggle">Show filters<i class="fa-solid fa-sliders"></i>
+            </p>
+            <p>Sort By</p><i class="fa-solid fa-angle-down"></i>
         </div>
     </div>
 
@@ -126,6 +147,7 @@
                         <a href="#" onclick="filterProducts('women-shoes')">Women's Shoes</a>
                         <a href="#" onclick="filterProducts('women-accessories')">Accessories &
                             Equipments</a>
+                        Equipments</a>
                     </div>
 
                 </div>
@@ -146,6 +168,8 @@
                         <a href="#" onclick="filterProducts('lifestyle')">Lifestyle</a>
                         <a href="#" onclick="filterProducts('running')">Running</a>
                         <a href="#" onclick="filterProducts('tennis')">Tennis</a>
+                        <a href="#" onclick="filterProducts('workout')">Workout</a>
+                        <a href="#" onclick="filterProducts('training and gym ')">Training and Gym</a>
                     </div>
 
                 </div>

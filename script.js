@@ -1,3 +1,17 @@
+var offerBar = document.querySelector(".offer-bar");
+var offerCloseBtn = document.getElementById("offer-close"); 		
+if (offerCloseBtn) {
+    offerCloseBtn.addEventListener("click", function () {
+        offerBar.style.display = "none";
+    });
+}
+
+
+
+
+
+
+
 const filterBtns = document.querySelectorAll(".filter-btn");
 
 filterBtns.forEach(button => {
@@ -45,6 +59,7 @@ const products = [
         price: "₹7,995",
         category: "men,men-shoes,football,featured",
         newest: true
+        category: "men,men-shoes,football"
     },
 
     {
@@ -55,6 +70,7 @@ const products = [
         price: "₹5,495",
         category: "men,men-shoes,football,featured",
         newest: true
+        category: "men,men-shoes,football"
     },
 
     {
@@ -65,6 +81,7 @@ const products = [
         price: "₹5,495",
         category: "men,men-shoes,football,women,featured",
         newest: true
+        category: "men,men-shoes,football,women"
     },
 
     {
@@ -75,6 +92,7 @@ const products = [
         price: "₹5,995",
         category: "men,men-shoes,football,women,featured",
         newest: true
+        category: "men,men-shoes,football,women"
     },
 
     {
@@ -85,6 +103,7 @@ const products = [
         price: "₹5,495",
         category: "kids-shoes,featured",
         newest: true
+        category: "kids-shoes"
     },
 
     {
@@ -95,6 +114,7 @@ const products = [
         price: "₹4,995",
         category: "kids-shoes,featured",
         newest: true
+        category: "kids-shoes"
     },
 
     {
@@ -105,6 +125,7 @@ const products = [
         price: "₹4,495",
         category: "kids-shoes,featured",
         newest: true
+        category: "kids-shoes"
     },
 
     {
@@ -115,6 +136,7 @@ const products = [
         price: "₹8,295",
         category: "men,men-clothing,short sleeve,featured",
         newest: true
+        category: "men,men-clothing"
     },
 
     {
@@ -123,6 +145,7 @@ const products = [
         content: "Men's Nike Dri-FIT Football Replica Shorts",
         price: "₹2,546",
         category: "men,men-clothing,featured"
+        category: "men,men-clothing"
     },
 
     {
@@ -131,6 +154,7 @@ const products = [
         content: "Nike Brazil 2026 Stadium Home Older Kids' Dri-FIT Football Replica Shirt",
         price: "₹3,995",
         category: "kids,kids-clothing,short sleeve,featured"
+        category: "kids,kids-clothing"
     },
 
     {
@@ -139,6 +163,7 @@ const products = [
         content: "Older Kids' Nike Dri-FIT Football Replica Shirt",
         price: "₹3,995",
         category: "kids,kids-clothing,short sleeve,featured"
+        category: "kids,kids-clothing"
     },
     {
         image: "images/product12.jpg",
@@ -146,6 +171,7 @@ const products = [
         content: "Younger Kids' Nike Football Replica 3-Piece Kit",
         price: "₹3,995",
         category: "kids,kids-clothing,short sleeve,featured"
+        category: "kids,kids-clothing"
     },
     {
         image: "images/product13.jpg",
@@ -153,6 +179,7 @@ const products = [
         content: "Men's Nike Aero-FIT Football Authentic Shirt",
         price: "₹2,546",
         category: "men,men-clothing,featured"
+        category: "men,men-clothing"
     },
     {
         image: "images/product14.jpg",
@@ -160,6 +187,7 @@ const products = [
         content: "Men's Nike Dri-FIT Football Replica Shorts",
         price: "₹5,095",
         category: "men,men-clothing,featured"
+        category: "men,men-clothing"
     },
     {
         image: "images/product15.jpg",
@@ -167,6 +195,7 @@ const products = [
         content: "Older Kids' Nike Dri-FIT Football Replica Shirt",
         price: "₹3,995",
         category: "kids,kids-clothing,short sleeve,featured"
+        category: "kids,kids-clothing"
     },
     {
         image: "images/product16.jpg",
@@ -176,6 +205,7 @@ const products = [
         originalPrice: "₹8,595",
         discount: "30% off",
         category: "men,women,tennis,20% and above,featured,all discounted products"
+        category: "men,women,tennis"
     },
     {
         image: "images/product17.jpg",
@@ -183,6 +213,7 @@ const products = [
         content: "Men's Nike Dri-FIT Football Replica Shirt",
         price: "₹5,095",
         category: "men,men-clothing,short sleeve,featured"
+        category: "men,men-clothing"
     },
     {
         image: "images/lifestyle1.jpg",
@@ -192,6 +223,8 @@ const products = [
         originalPrice: "₹15,999",
         discount: "20% off",
         category: "men,women,lifestyle,10% and above,20% and above,all discounted products,featured"
+        price: "₹13,596",
+        category: "men,women,lifestyle"
     },
     {
         image: "images/lifestyle2.jpg",
@@ -201,6 +234,8 @@ const products = [
         originalPrice: "₹16,995",
         discount: "20% off",
         category: "men,women,lifestyle,10% and above,20% and above,all discounted products,featured"
+        price: "₹10,795",
+        category: "men,women,lifestyle"
     },
     {
         image: "images/lifestyle3.jpg",
@@ -210,6 +245,7 @@ const products = [
         originalPrice: "₹15,995",
         discount: "10% off",
         category: "men,women,lifestyle,10% and above,all discounted products,featured"
+        category: "men,women,lifestyle"
     },
     {
         image: "images/accessories1.jpg",
@@ -219,6 +255,8 @@ const products = [
         originalPrice: "₹2,695",
         discount: "20% off",
         category: "men,men-accessories,women-accessories,20% and above,all discounted products,featured"
+        price: "₹2,426",
+        category: "men,men-accessories"
     },
     {
         image: "images/accessories2.jpg",
@@ -226,6 +264,7 @@ const products = [
         content: "Academic Football Shoe Bag",
         price: "₹846",
         category: "men,men-accessories,women-accessories,featured"
+        category: "men,men-accessories"
     },
     {
         image: "images/accessories3.jpg",
@@ -233,6 +272,7 @@ const products = [
         content: "Nike Jordan Pro Unstructured Flat-Bill Hat",
         price: "₹1,995",
         category: "men,men-accessories,women-accessories,featured"
+        category: "men,men-accessories"
     },
     {
         image: "images/accessories4.jpg",
@@ -240,6 +280,7 @@ const products = [
         content: "Nike FFF VaporFast Home Dri-FIT ADV Football Knee-High Socks",
         price: "₹1,436",
         category: "men,men-accessories,women-accessories,featured"
+        category: "men,men-accessories"
     },
     {
         image: "images/women1.jpg",
@@ -247,6 +288,7 @@ const products = [
         content: "Women's Loose Lace Polo Jersey Top",
         price: "₹5,295",
         category: "women,women-clothing,short sleeve,featured"
+        category:"women,women-clothing"
     },
     {
         image: "images/women2.jpg",
@@ -256,6 +298,8 @@ const products = [
         originalPrice: "₹1,995",
         discount: "20% off",
         category: "women,women-clothing,20% and above,featured,all discounted products"
+        price: "₹1,696",
+        category:"women,women-clothing"
     },
     {
         image: "images/women3.jpg",
@@ -361,6 +405,12 @@ const products = [
 
 
 
+        category:"women,women-clothing"
+    }
+
+];
+
+
 const productContainer = document.getElementById("productContainer");
 
 
@@ -397,6 +447,8 @@ function displayProducts(items) {
             }
      </div>
  
+            <p>${product.price}</p>
+
         </div>
 
         `;
@@ -431,6 +483,7 @@ const category = params.get("category");
 
 
 if (category) {
+if(category){
 
     const filtered = products.filter(product =>
         product.category.includes(category)
@@ -439,6 +492,7 @@ if (category) {
     displayProducts(filtered);
 
 } else {
+}else{
 
     displayProducts(products);
 
@@ -482,3 +536,23 @@ function sortProducts(type) {
 
 }
 
+
+
+
+
+
+
+
+
+
+let sidenav = document.getElementById("sidenav")
+let menuicon = document.getElementById("menuicon")
+let navclose = document.getElementById("navclose")
+
+menuicon.addEventListener("click",function(){
+    sidenav.style.right=0
+})
+
+navclose.addEventListener("click",function(){
+    sidenav.style.right="-50%"
+})
