@@ -228,24 +228,21 @@ body {
 
 
     width: 100%;
-    margin: -1%;
     padding: 0;
 }
 
 .container-main {
     overflow: hidden;
-    width: fit-content;
-    margin: 5px;
+    width: 100%;
     border-radius: 0;
     background-color: #F4F4F4;
-    padding: 20px 0px;
+    padding: 20px 0;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
 }
 
 .wrapper {
     display: grid;
-    width: fit-content;
-    margin: 5px;
+    width: 100%;
     grid-auto-flow: column;
     grid-auto-flow: 12rem;
     gap: 2rem;
