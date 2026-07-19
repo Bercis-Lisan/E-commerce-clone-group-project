@@ -46,7 +46,7 @@
 
     <div class="navbar">
 
-        <a href="index.html" class="logo">
+        <a href="index.html" target="_blank" class="logo">
             <i class="fa-brands fa-shopify"></i> Luxe Walk
         </a>
 
@@ -194,8 +194,9 @@
     <script src="product2.js"></script>
     <script>
         const cartCountEl = document.getElementById('cartCount');
-        let cartCount = parseInt(localStorage.getItem('cartCount')) || 0;
+        let cartCount = 0;
         cartCountEl.textContent = cartCount;
+        localStorage.setItem('cartCount', cartCount);
 
         document.addEventListener('click', function(event) {
             const button = event.target.closest('button, a');
